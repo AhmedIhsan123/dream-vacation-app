@@ -12,6 +12,7 @@
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
+	"type": "module",
 	"bugs": {
 		"url": "https://github.com/AhmedIhsan123/dream-vacation-app/issues"
 	},
