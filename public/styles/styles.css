@@ -38,12 +38,11 @@ fieldset {
 #image-container {
 	display: flex;
 	flex-direction: column;
-	height: 30%;
-	width: 100%;
 	background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
 		url("https://bit.ly/305-vacation") center/cover no-repeat;
 	border-top-left-radius: 10px;
 	border-top-right-radius: 10px;
+	height: 100px;
 	align-items: center;
 	justify-content: center;
 	padding: 1rem;
@@ -102,6 +101,11 @@ fieldset {
 	transition: background-color 0.3s ease; /* smooth hover effect */
 }
 
+.error {
+	visibility: hidden;
+	color: red;
+}
+
 /* Optional: hover effect */
 #submit-button:hover {
 	background-color: #001244; /* slightly darker on hover */
@@ -124,6 +128,8 @@ fieldset {
 	}
 	form {
 		height: calc(100% - 30%);
-		justify-content: space-between;
+	}
+	#dep-travel-container {
+		flex-direction: column;
 	}
 }

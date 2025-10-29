@@ -5,6 +5,15 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Booking</title>
 
+		<!-- Page favicon -->
+		<link
+			rel="icon"
+			href="https://cdn-icons-png.flaticon.com/512/7893/7893979.png"
+		/>
+
+		<!-- Scripts -->
+		<script defer src="/scripts/script.js"></script>
+
 		<!-- Link CSS -->
 		<link rel="stylesheet" href="styles/styles.css" />
 	</head>
@@ -13,10 +22,13 @@
 			<div id="image-container">
 				<h1>Book Your Dream Vacation</h1>
 			</div>
-			<form>
+			<form id="booking-form">
 				<fieldset>
 					<div id="destination-container">
-						<label for="destination">Destination</label>
+						<div>
+							<label for="destination">Destination</label>
+							<span class="error" id="err-destination">*</span>
+						</div>
 						<select name="destination" id="destination">
 							<option value="">Choose a destination...</option>
 							<option value="bali-indonesia">Bali, Indonesia</option>
@@ -29,17 +41,18 @@
 
 					<div id="dep-travel-container">
 						<div>
-							<label for="d-date">Departure Date</label>
+							<div>
+								<label for="d-date">Departure Date</label>
+								<span class="error" id="err-departure">*</span>
+							</div>
 							<input type="date" name="d-date" id="d-date" />
 						</div>
 						<div>
-							<label for="travelers">Number of Travelers</label>
-							<input
-								placeholder="0"
-								type="number"
-								name="travelers"
-								id="travelers"
-							/>
+							<div>
+								<label for="travelers">Number of Travelers</label>
+								<span class="error" id="err-travelers">*</span>
+							</div>
+							<input type="number" name="travelers" id="travelers" value="0" />
 						</div>
 					</div>
 				</fieldset>
