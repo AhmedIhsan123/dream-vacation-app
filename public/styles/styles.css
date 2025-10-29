@@ -1,0 +1,129 @@
+/* Global reset */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Layout */
+body {
+	display: grid;
+	place-items: center;
+	height: 100vh;
+	background-color: rgb(56, 56, 255);
+}
+
+main {
+	width: 30vw;
+	background-color: white;
+	border-radius: 10px;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	padding: 1rem;
+}
+
+fieldset {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	border: 0;
+}
+
+/* Image styles */
+#image-container {
+	display: flex;
+	flex-direction: column;
+	height: 30%;
+	width: 100%;
+	background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+		url("https://bit.ly/305-vacation") center/cover no-repeat;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	align-items: center;
+	justify-content: center;
+	padding: 1rem;
+}
+
+#image-container h1 {
+	color: white;
+	font-size: 30px;
+}
+
+#destination-container {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+#dep-travel-container {
+	display: flex;
+	flex-direction: row;
+	gap: 1rem; /* space between the two divs */
+}
+
+#dep-travel-container > div {
+	flex: 1; /* each div takes equal width */
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem; /* spacing between label and input inside each div */
+}
+
+/* Universal input/select styling */
+#dep-travel-container div input,
+#destination-container select {
+	width: 100%;
+	padding: 0.75rem 0.5rem;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	font-size: 1rem;
+	outline: none;
+	box-sizing: border-box;
+}
+
+#dep-travel-container div input:focus,
+#destination-container select:focus {
+	border-color: #2c882b;
+	box-shadow: 0 0 0 2px rgba(44, 136, 43, 0.2);
+}
+
+#submit-button {
+	align-self: center;
+	padding: 0.75rem 1.5rem;
+	background: linear-gradient(to left, #002366 0%, #0044aa 50%, #0055ff 100%);
+	color: white;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	transition: background-color 0.3s ease; /* smooth hover effect */
+}
+
+/* Optional: hover effect */
+#submit-button:hover {
+	background-color: #001244; /* slightly darker on hover */
+}
+
+@media (max-width: 1500px) {
+	main {
+		width: 50vw;
+	}
+}
+
+@media (max-width: 900px) {
+	main {
+		border-radius: 0;
+		height: 100%;
+		width: 100%;
+	}
+	#image-container {
+		border-radius: 0;
+	}
+	form {
+		height: calc(100% - 30%);
+		justify-content: space-between;
+	}
+}

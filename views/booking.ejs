@@ -4,8 +4,48 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Booking</title>
+
+		<!-- Link CSS -->
+		<link rel="stylesheet" href="styles/styles.css" />
 	</head>
 	<body>
-		<main></main>
+		<main>
+			<div id="image-container">
+				<h1>Book Your Dream Vacation</h1>
+			</div>
+			<form>
+				<fieldset>
+					<div id="destination-container">
+						<label for="destination">Destination</label>
+						<select name="destination" id="destination">
+							<option value="">Choose a destination...</option>
+							<option value="bali-indonesia">Bali, Indonesia</option>
+							<option value="paris-france">Paris, France</option>
+							<option value="tokyo-japan">Tokyo, Japan</option>
+							<option value="maldives">Maldives</option>
+							<option value="nyc-usa">New York City, USA</option>
+						</select>
+					</div>
+
+					<div id="dep-travel-container">
+						<div>
+							<label for="d-date">Departure Date</label>
+							<input type="date" name="d-date" id="d-date" />
+						</div>
+						<div>
+							<label for="travelers">Number of Travelers</label>
+							<input
+								placeholder="0"
+								type="number"
+								name="travelers"
+								id="travelers"
+							/>
+						</div>
+					</div>
+				</fieldset>
+
+				<button type="submit" id="submit-button">Find My Vacation</button>
+			</form>
+		</main>
 	</body>
 </html>
