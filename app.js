@@ -24,3 +24,8 @@ app.listen(PORT, () => {
 app.get("/", (req, res) => {
 	res.render("booking");
 });
+
+// Define confirmation route
+app.get("/confirmation", (req, res) => {
+	res.render("confirmation");
+});

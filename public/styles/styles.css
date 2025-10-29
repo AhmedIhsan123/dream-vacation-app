@@ -27,6 +27,10 @@ form {
 	padding: 1rem;
 }
 
+a {
+	padding: 1rem;
+}
+
 fieldset {
 	display: flex;
 	flex-direction: column;
